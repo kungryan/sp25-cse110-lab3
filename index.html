@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Team Sprout Meeting Minutes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ryan Kung">
+        <meta name="description" content="Meeting minute notes for Team Sprout.">
+        <link rel="icon" href="assets/icons/eco_leaf_plant_growth_sprout_icon_251449.ico">
+    </head>
+    <body>
+        <header>
+            <h1 id="mainHeading">Team Sprout Meeting Minutes</h1>
+            <nav>
+                <ul>
+                    <li><a href="#meetingNote1">Team Introduction</a></li>
+                    <li><a href="#gameForm">Form</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </header>
+        <meeting-note id="meetingNote1">
+            <hgroup>
+                <h2>App Beginnings</h2>
+                <p>Brainstorming. <span class="meetingDate">4/13/2025</span></p>
+            </hgroup>
+            <details>
+                <summary>Attendance:</summary>
+                <ol>
+                    <li>Steve Jones</li>
+                    <li>Bob Ferguson</li>
+                    <li>Hendrik Wilson</li>
+                    <li>Mavis Smith</li>
+                </ol>
+            </details>
+            <div class="meetingNotes">
+                <section class="agenda">
+                    <h3>Agenda</h3>
+                    <p>Brainstorming ideas for a <i>new app</i> and figuring out the wireframe.</p>
+                </section>
+                <section class="unfinished">
+                    <h3>Unfinished Business</h3>
+                    <ul>
+                        <li>Introduction for <b>Mavis</b> as they were absent last meeting.</li>
+                    </ul>
+                </section>
+                <section class="newBusiness">
+                    <h3>New Business</h3>
+                    <ul>
+                        <li>Figuring out what kind of app to make.</li>
+                        <li>Making the wireframe</li>
+                    </ul>
+                </section>
+                <section class="meetingComments">
+                    <h3>Meeting Comments</h3>
+                    <ul>
+                        <li><strong>Concern</strong>: What <em>kind</em> of stack?</li>
+                        <li><strong>Concern</strong>: What will our <em>team roles</em> be?</li>
+                        <li><strong>Concern</strong>: Potential time constraints</li>
+                    </ul>
+                </section>
+                <section class="meetingMedia">
+                    <h3>Meeting Media</h3>
+                    <figure id="wireframe">
+                        <img src="assets/images/wireframe.png" width="350" height="350" alt="A potential wireframe for our app.">
+                        <figcaption>A potential wireframe for our app.  </figcaption>
+                    </figure>
+                    <video width="350" height="350" controls>
+                        <source src="assets/videos/meeting.mp4">
+                    </video>
+                    <br>
+                    <audio controls>
+                        <source src="assets/sounds/talk.mp3">
+                    </audio>
+                    <br>
+                </section>
+            </div>
+        </meeting-note>
+        <div class="formWrapper">
+            <h2>Favorite Game Form!</h2>
+            <form action="https://httpbin.org/post" method="POST" id="gameForm">
+                <fieldset id="gameInfo">
+                    <legend>Game Information</legend>
+                    <label for="gameName">Game Name *:</label>
+                    <input type="text" name="gameName" id="gameName" placeholder="Celeste" minlength="1" maxlength="32" required>
+                    <br>
+                    <label for="gamePlatform">Platform:</label>
+                    <select name="gamePlatform" id="gamePlatform">
+                        <option value="pc">PC</option>
+                        <option value="console">Console</option>
+                        <option value="mobile">Mobile</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                    <label for="gameGenre">Game Genre *:</label>
+                    <input list="genreList" id="gameGenre" name="gameGenre" placeholder="RPG" maxlength="32">
+                    <datalist id="genreList">
+                        <option value="rpg">RPG</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="casual">Casual</option>
+                        <option value="other">Other</option>
+                    </datalist>
+                </fieldset>
+                <fieldset id="formReason">
+                    <legend>Reason *</legend>
+                    <br>
+                    <label for="gameComments"></label>
+                    <textarea name="gameComments" id="gameComments" cols="80" rows="5" placeholder="Lorem ipsum" minlength='1' maxlength='250' required></textarea>
+                    <br>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <footer>
+            <nav>
+                <a href="#mainHeading">Jump to Top</a>
+            </nav>
+            <address>
+                Team Sprout
+                <br>
+                123 Street St. San Diego, CA.
+                <br>
+                teamsproutinquiries@example.com
+            </address>
+        </footer>
+    </body>
+</html>
