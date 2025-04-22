@@ -12,8 +12,8 @@
 /** || Custom variables */
 :root {
     /** Base colors */
-    --clr-dark-a0: #000000;
-    --clr-light-a0: #ffffff;
+    --clr-dark-a0: hsl(0,0,0);
+    --clr-light-a0: white;
 
     /** Theme primary colors */
     --clr-primary-a0: #76b507;
@@ -22,6 +22,7 @@
     --clr-primary-a30: #a7ce6c;
     --clr-primary-a40: #b6d685;
     --clr-primary-a50: #c5de9d;
+    --clr-primary-a60: color(from green srgb r g b / 0.5);
 
     /** Theme surface colors */
     --clr-surface-a0: #121212;
@@ -38,6 +39,8 @@
     --clr-surface-tonal-a30: #5f625a;
     --clr-surface-tonal-a40: #777a73;
     --clr-surface-tonal-a50: #91938d;
+
+    --clr-mix: color-mix(in srgb, plum, #f00);
 
     /** Opacity */
     --slight-transparent: rgba(0,0,0,0.2);
@@ -96,7 +99,8 @@ p, h1, h2, h3, h4, h5, h6 {
 /** || Container styling */
 body {
     width: 100%;
-    max-width: 100vw;
+    max-width: 100dvw;
+    min-width: 100%;
     height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -110,6 +114,7 @@ body {
     background-color: var(--clr-surface-a0);
     color: var(--clr-light-a0);
     line-height: 1.5;
+    font-family: "Merriweather", Georgia, 'Times New Roman', Times, serif
 }
 
 main {
@@ -209,7 +214,10 @@ img, video {
 /** || Header Styling */
 header {
     position: relative;
-    padding: var(--default-padding);
+    padding-top: var(--default-padding);
+    padding-right: var(--default-padding);
+    padding-bottom: var(--default-padding);
+    padding-left: var(--default-padding);
     width: 100%;
     height: 100%;
     display: flex;
@@ -247,6 +255,7 @@ p, a {
 }
 
 h1 {
+    margin: auto;
     font-size: var(--h1-size);
     text-align: center;
 }
@@ -276,6 +285,8 @@ p, li {
 }
 
 fieldset {
+    margin-left: auto;
+    margin-right: auto;
     padding: var(--form-padding);
     border: var(--border-size) var(--border-color) var(--border-form-style);
     border-radius:  var(--border-radius);
@@ -298,12 +309,17 @@ input, textarea {
     max-height: 100%;
 }
 
+input:user-invalid {
+    border: 3px var(--clr-mix) solid;
+}
+
 input:active, textarea:active {
     background-color: var(--clr-surface-a20);
 }
 
 button {
-    margin: var(--default-margin) 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     width: var(--button-width);
     height: var(--button-height);
     background-color: var(--clr-surface-a30);
