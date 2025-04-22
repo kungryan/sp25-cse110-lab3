@@ -42,6 +42,18 @@
     --mn-font-size: 16pt;
     --button-width: 75px;
     --button-height: 50px;
+
+    /** Box Model */
+    --default-margin: 1rem;
+    --default-padding: 1rem;
+    --form-padding: 1rem;
+    --mn-margin: 0.5rem;
+    --mn-padding: 0.5rem;
+    --border-size: 2px;
+    --border-color: var(--clr-primary-a50);
+    --border-style: solid;
+    --border-form-style: dashed;
+    --border-radius: 15px;
 }
 
 /** || CSS reset */
@@ -53,6 +65,19 @@
 
 br, hr {
     display: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
 }
 
 /** || Container styling */
@@ -70,10 +95,12 @@ body {
     justify-items: center;
     align-items: center;
     background-color: var(--clr-surface-a0);
-    color: var(--clr-light-a0)
+    color: var(--clr-light-a0);
+    line-height: 1.5;
 }
 
 main {
+    padding: var(--default-padding);
     width: 100%;
     max-width: var(--main-width);
     margin-inline: auto;
@@ -83,16 +110,21 @@ main {
     align-items: flex-start;
     gap: var(--main-gap);
     background-color: var(--clr-surface-a10);
+    border-radius: var(--border-radius);
 }
 
 /** || Meeting notes styling */
 meeting-note {
+    padding: var(--mn-padding);
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     font-size: var(--mn-font-size);
+    border: var(--border-size) var(--border-color) var(--border-style);
+    border-radius: var(--border-radius);
 }
 
 .meetingNotes {
@@ -100,6 +132,18 @@ meeting-note {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+.meetingNotes > section {
+    padding: var(--default-padding);
+}
+
+meeting-note > hgroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /** || Media styling */
@@ -176,6 +220,12 @@ h3 {
     flex-wrap: wrap;
 }
 
+fieldset {
+    padding: var(--form-padding);
+    border: var(--border-size) var(--border-color) var(--border-form-style);
+    border-radius:  var(--border-radius);
+}
+
 input, textarea {
     background-color: var(--clr-surface-a30);
     width: 100%;
@@ -183,10 +233,13 @@ input, textarea {
 }
 
 button {
+    margin: var(--default-margin) 0;
     width: var(--button-width);
     height: var(--button-height);
     background-color: var(--clr-surface-a30);
-    color: var(--clr-primary-a0);
+    color: var(--clr-primary-a30);
+    border: var(--border-size) var(--border-color) var(--border-style);
+    border-radius: var(--border-radius);
 }
 
 /** || Footer styling
