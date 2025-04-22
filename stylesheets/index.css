@@ -12,7 +12,7 @@
 /** || Custom variables */
 :root {
     /** Base colors */
-    --clr-dark-a0: hsl(0,0,0);
+    --clr-dark-a0: hsl(0,0%,0%);
     --clr-light-a0: white;
 
     /** Theme primary colors */
