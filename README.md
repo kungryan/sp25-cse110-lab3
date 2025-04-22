@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-https://kungryan.github.io/Lab2/
+# Lab 3
+https://kungryan.github.io/sp25-cse110-lab3
