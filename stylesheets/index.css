@@ -1,12 +1,12 @@
 /** || Imports */
 @font-face {
     font-family: "Lato";
-    src: url("assets/fonts/lato-regular.ttf");
+    src: url("../assets/fonts/lato-regular.ttf");
 }
 
 @font-face {
     font-family: "Merriweather";
-    src: url("assets/fonts/merriweather-regular.ttf");
+    src: url("../assets/fonts/merriweather-regular.ttf");
 }
 
 /** || Custom variables */
