@@ -1,0 +1,58 @@
+/** || Imports */
+
+/** || Custom variables */
+:root {
+    --body-row-gap: 1rem;
+    --main-gap: 1rem;
+}
+
+/** || CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+br, hr {
+    display: none;
+}
+
+/** || Container styling */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    row-gap: var(var(--body-row-gap));
+    justify-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--main-gap);
+}
+
+/** || Meeting notes styling */
+
+meeting-note {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/** || Header Styling */
+
+/** || Text styling */
+h3 {
+    display: block;
+}
+
+/** || Form styling */
+
+/** || Footer styling
