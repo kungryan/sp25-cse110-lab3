@@ -145,7 +145,7 @@ meeting-note {
     border-radius: var(--border-radius);
 }
 
-.meetingNotes {
+div[class="meetingNotes"] {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -178,14 +178,7 @@ meeting-note:has(details[open]) details {
 }
 
 /** || Media styling */
-.mediaMeeting {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-.meetingMedia {
+section.meetingMedia {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,14 +194,23 @@ figure {
     align-items: center;
 }
 
-img, video {
+.meetingMedia > h3 ~ * {
     width: 100%;
     max-width: 12in;
     height: auto;
     max-height: 100%;
+}
+
+img, video {
     display: block;
-    justify-self: center;
     align-self: center;
+    justify-self: center;
+}
+
+img + figcaption {
+    margin-top: var(--default-margin);
+    color: var(--clr-primary-a0);
+    font-size: var(--p-size);
 }
 
 /** || Header Styling */
@@ -282,14 +284,14 @@ p, li {
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
-}
 
-fieldset {
-    margin-left: auto;
-    margin-right: auto;
-    padding: var(--form-padding);
-    border: var(--border-size) var(--border-color) var(--border-form-style);
-    border-radius:  var(--border-radius);
+    & fieldset {
+        margin-left: auto;
+        margin-right: auto;
+        padding: var(--form-padding);
+        border: var(--border-size) var(--border-color) var(--border-form-style);
+        border-radius:  var(--border-radius);
+    }
 }
 
 #gameInfo  {
