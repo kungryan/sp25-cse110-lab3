@@ -2,6 +2,35 @@
 
 /** || Custom variables */
 :root {
+    /** Base colors */
+    --clr-dark-a0: #000000;
+    --clr-light-a0: #ffffff;
+
+    /** Theme primary colors */
+    --clr-primary-a0: #76b507;
+    --clr-primary-a10: #87bd36;
+    --clr-primary-a20: #97c652;
+    --clr-primary-a30: #a7ce6c;
+    --clr-primary-a40: #b6d685;
+    --clr-primary-a50: #c5de9d;
+
+    /** Theme surface colors */
+    --clr-surface-a0: #121212;
+    --clr-surface-a10: #282828;
+    --clr-surface-a20: #3f3f3f;
+    --clr-surface-a30: #575757;
+    --clr-surface-a40: #717171;
+    --clr-surface-a50: #8b8b8b;
+
+    /** Theme tonal surface colors */
+    --clr-surface-tonal-a0: #1c2016;
+    --clr-surface-tonal-a10: #31352b;
+    --clr-surface-tonal-a20: #474b42;
+    --clr-surface-tonal-a30: #5f625a;
+    --clr-surface-tonal-a40: #777a73;
+    --clr-surface-tonal-a50: #91938d;
+
+    /** Sizing */
     --main-width: 67.5rem;
     --body-row-gap: 1rem;
     --main-gap: 1rem;
@@ -40,6 +69,8 @@ body {
     row-gap: var(--body-row-gap);
     justify-items: center;
     align-items: center;
+    background-color: var(--clr-surface-a0);
+    color: var(--clr-light-a0)
 }
 
 main {
@@ -51,6 +82,7 @@ main {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: var(--main-gap);
+    background-color: var(--clr-surface-a10);
 }
 
 /** || Meeting notes styling */
@@ -110,6 +142,7 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    background-color: var(--clr-surface-a20);
 }
 
 nav {
@@ -117,6 +150,12 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+nav a {
+    color: var(--clr-primary-a0);
+    font-size: var(--p-size);
+
 }
 
 h1 {
@@ -138,6 +177,7 @@ h3 {
 }
 
 input, textarea {
+    background-color: var(--clr-surface-a30);
     width: 100%;
     max-height: 100%;
 }
@@ -145,6 +185,8 @@ input, textarea {
 button {
     width: var(--button-width);
     height: var(--button-height);
+    background-color: var(--clr-surface-a30);
+    color: var(--clr-primary-a0);
 }
 
 /** || Footer styling
